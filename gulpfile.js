@@ -28,6 +28,7 @@ gulp.task('build', function (callback) {
 
 /**
  * 编译代码，自动部署到服务器
+ * 自动上传文件到远程FTP 服务器，以供在线调试
  */
 const ftp = require('gulp-sftp')
 gulp.task('upload', ['build'], function (callback) {

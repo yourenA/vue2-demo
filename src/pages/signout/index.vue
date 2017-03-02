@@ -18,7 +18,12 @@
 	</div>
 </template>
 <script>
+
     import { mapActions } from 'vuex'
+	/**
+	 * 在webpack中设置别名
+	 * store: path.resolve('src/store/'), //常用工具方法
+	 * */
     import { USER_SIGNOUT } from 'store/user'
     export default {
         methods: {

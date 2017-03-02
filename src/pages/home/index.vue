@@ -13,6 +13,8 @@
 <script>
     import { mapState } from 'vuex'
     export default {
+    	//使用 mapState 辅助函数帮助我们生成计算属性
+
         computed: mapState({ user: state => state.user }),
     }
 </script>

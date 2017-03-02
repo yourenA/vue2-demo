@@ -13,6 +13,7 @@
 <template>
 	<div>
 		<v-header title="首页">
+			<!--在v-header组件中name为right的slot中挂载router-link-->
 			<router-link slot="right" v-if="user.id" to="/home">{{user.name}}</router-link>
 		</v-header>
 		<div class="login-msg" v-if="!user.id">

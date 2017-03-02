@@ -25,16 +25,29 @@
 <template>
 	<header class="header">
 		<div class="item left">
+			<!--挂载name=left的内容-->
 			<slot name="left"></slot>
 		</div>
 		<div class="title">{{title}}</div>
 		<div class="item right">
+			<!--挂载name=left的内容-->
 			<slot name="right"></slot>
 		</div>
 	</header>
 </template>
 <script>
     export default {
+    	/**
+		 * 使用props传递数据
+		 * 无验证  props: ['message'],
+		 * 有验证  props:{ propD: {type: Number,default: 100}，{}，{}}，
+		 * 动态 props：
+		 * <div>
+		 * <input v-model="parentMsg">
+		 * <br>
+		 * <child v-bind:my-message="parentMsg"></child>
+		 * </div>
+		 */
         props: {
             title: {
                 type: String,

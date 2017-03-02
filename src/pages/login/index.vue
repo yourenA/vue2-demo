@@ -21,6 +21,8 @@
 		<v-header title="登录">
 			<router-link slot="left" to="/">返回</router-link>
 		</v-header>
+		<!-- click.stop     阻止单击事件冒泡 -->
+		<!-- submit.prevent 提交事件不再重载页面 -->
 		<form class="login" v-on:submit.prevent="submit">
 			<div class="line">	
 				<div v-show="btn && !form.id">id不能为空</div>
@@ -49,11 +51,15 @@
 			}
 		},
 		methods: {
-            ...mapActions([USER_SIGNIN]),
+			/**
+			 * 使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
+			 */
+            ...mapActions([USER_SIGNIN]),// 映射 this.USER_SIGNIN() 为 this.$store.dispatch(USER_SIGNIN)
 			submit() {
 				this.btn = true
 				if(!this.form.id || !this.form.name) return
 				this.USER_SIGNIN(this.form)
+				//this.$router返回 Router 实例
 				this.$router.replace({ path: '/home' })
 			}
 		}
