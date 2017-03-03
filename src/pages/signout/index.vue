@@ -1,4 +1,4 @@
-<style lang="less" scoped>
+<style lang="less" rel="stylesheet/less" scoped>
 	.btn {
 		padding: 50px;
 		text-align: center;

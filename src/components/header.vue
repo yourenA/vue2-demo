@@ -1,4 +1,4 @@
-<style lang="less" scoped>
+<style rel="stylesheet/less" lang="less" scoped>
 	.header {
 		position: relative;
 		line-height: 38px;

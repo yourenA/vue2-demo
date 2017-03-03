@@ -19,7 +19,7 @@ export default [
             {
                 path: '/login', //登录
                 meta: { auth: false },
-                component: r => require.ensure([], () => r(require('../pages/login/')), 'group-foo')
+                component: r => require.ensure([], () => r(require('../pages/login/')), 'group-foo')/*异步加载组件的js*/
             },
             {
                 path: '/signout', //退出
